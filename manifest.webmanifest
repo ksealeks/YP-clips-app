@@ -1,0 +1,9 @@
+{
+  "name": "Yango Play Clips",
+  "short_name": "YP Clips",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "description": "The best Yango Play moments, one swipe at a time."
+}
