@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="description" content="Watch the best Yango Play moments, one swipe at a time." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Yango Play Clips</title>
+  </head>
+  <body>
+    <main id="feed" class="feed" aria-label="Yango Play clips"></main>
+
+    <div class="chrome" aria-hidden="true">
+      <a class="brand" href="#" tabindex="-1" aria-label="Yango Play">
+        <span class="brand-mark">Y</span>
+        <span>Yango <b>Play</b></span>
+      </a>
+      <div class="sound-hint" id="soundHint">
+        <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2-3.74v7.48a4.5 4.5 0 0 0 2-3.74z"/></svg>
+        Tap for sound
+      </div>
+    </div>
+
+    <template id="clipTemplate">
+      <article class="clip" aria-label="Video clip">
+        <video class="clip-video" playsinline muted loop preload="metadata"></video>
+        <div class="poster-glow"></div>
+        <div class="scrim"></div>
+        <button class="play-toggle" type="button" aria-label="Play or pause video">
+          <svg viewBox="0 0 64 64"><path d="M24 17v30l25-15z"/></svg>
+        </button>
+        <div class="clip-ui">
+          <div class="clip-copy">
+            <span class="eyebrow">YANGO PLAY ORIGINAL</span>
+            <h1 class="clip-title"></h1>
+            <p class="clip-meta"></p>
+          </div>
+          <a class="cta" target="_blank" rel="noopener">
+            <span>Keep Watching</span>
+            <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <div class="progress"><span></span></div>
+        </div>
+      </article>
+    </template>
+
+    <noscript>This experience needs JavaScript to play videos.</noscript>
+    <script defer src="clips.js"></script>
+    <script defer src="app.js"></script>
+  </body>
+</html>
